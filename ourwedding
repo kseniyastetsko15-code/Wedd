@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тимофей & Ксения — 27.02.2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== 照片 + 名字 ===== -->
+<header class="hero">
+  <div class="stars-bg"></div>
+  <div class="photo-frame">
+    <img src="https://placehold.co/600x400/a8c8e8/1e3a5f?text=Ваше+детское+фото" alt="Детское фото">
+  </div>
+  <p class="hero-sub">Мы приглашаем вас на нашу свадьбу</p>
+  <h1>Тимофей <span class="amp">&</span> Ксения</h1>
+  <p class="hero-date">27 февраля 2027</p>
+  <a href="#rsvp" class="btn">Подтвердить присутствие</a>
+</header>
+
+<!-- ===== Обратный отсчёт ===== -->
+<section class="section countdown-section">
+  <h2 class="section-title">До нашей свадьбы осталось</h2>
+  <div class="countdown" id="countdown">
+    <div class="cd-item"><span id="days">0</span><p>дней</p></div>
+    <div class="cd-item"><span id="hours">0</span><p>часов</p></div>
+    <div class="cd-item"><span id="minutes">0</span><p>минут</p></div>
+    <div class="cd-item"><span id="seconds">0</span><p>секунд</p></div>
+  </div>
+</section>
+
+<!-- ===== Данные (место/время) ===== -->
+<section class="section details-section">
+  <h2 class="section-title">Где и когда</h2>
+  <div class="details-grid">
+    <div class="detail-card">
+      <h3>Церемония</h3>
+      <p class="detail-time">14:30</p>
+      <p>27 февраля 2027</p>
+      <p class="detail-place">Место будет объявлено позже</p>
+    </div>
+    <div class="detail-card">
+      <h3>Банкет</h3>
+      <p class="detail-time">16:00</p>
+      <p>27 февраля 2027</p>
+      <p class="detail-place">Место будет объявлено позже</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Календарик ===== -->
+<section class="section calendar-section">
+  <h2 class="section-title">Отметьте день в календаре</h2>
+  <div class="calendar">
+    <div class="cal-header">
+      <span class="cal-month">Февраль 2027</span>
+    </div>
+    <div class="cal-grid">
+      <span class="cal-day-name">Пн</span><span class="cal-day-name">Вт</span>
+      <span class="cal-day-name">Ср</span><span class="cal-day-name">Чт</span>
+      <span class="cal-day-name">Пт</span><span class="cal-day-name">Сб</span>
+      <span class="cal-day-name">Вс</span>
+      <span class="cal-day empty"></span><span class="cal-day">1</span>
+      <span class="cal-day">2</span><span class="cal-day">3</span>
+      <span class="cal-day">4</span><span class="cal-day">5</span>
+      <span class="cal-day">6</span><span class="cal-day">7</span>
+      <span class="cal-day">8</span><span class="cal-day">9</span>
+      <span class="cal-day">10</span><span class="cal-day">11</span>
+      <span class="cal-day">12</span><span class="cal-day">13</span>
+      <span class="cal-day">14</span><span class="cal-day">15</span>
+      <span class="cal-day">16</span><span class="cal-day">17</span>
+      <span class="cal-day">18</span><span class="cal-day">19</span>
+      <span class="cal-day">20</span><span class="cal-day">21</span>
+      <span class="cal-day">22</span><span class="cal-day">23</span>
+      <span class="cal-day">24</span><span class="cal-day">25</span>
+      <span class="cal-day">26</span>
+      <span class="cal-day wedding-day">27</span>
+      <span class="cal-day">28</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Программа дня ===== -->
+<section class="section program-section">
+  <h2 class="section-title">Программа дня</h2>
+  <div class="timeline">
+    <div class="tl-item"><span class="tl-time">14:15</span><span class="tl-text">Сбор гостей</span></div>
+    <div class="tl-item"><span class="tl-time">14:30</span><span class="tl-text">Торжественная церемония</span></div>
+    <div class="tl-item"><span class="tl-time">16:00</span><span class="tl-text">Весёлый банкет</span></div>
+    <div class="tl-item"><span class="tl-time">21:00</span><span class="tl-text">Очень вкусный торт</span></div>
+    <div class="tl-item"><span class="tl-time">23:00</span><span class="tl-text">Конец чудесного вечера</span></div>
+  </div>
+</section>
+
+<!-- ===== RSVP ===== -->
+<section class="section rsvp-section" id="rsvp">
+  <h2 class="section-title">Подтвердите присутствие</h2>
+  <p class="rsvp-note">Пожалуйста, ответьте до 1 февраля 2027</p>
+  <form id="rsvpForm" action="https://formspree.io/f/ВАШ_ID" method="POST">
+    <input type="text" name="name" placeholder="Ваше имя и фамилия" required>
+    <select name="attendance" required>
+      <option value="">Придёте ли вы?</option>
+      <option value="Да, буду">Да, буду</option>
+      <option value="К сожалению, не смогу">К сожалению, не смогу</option>
+    </select>
+    <input type="text" name="guest" placeholder="Имя сопровождающего (если будет)">
+    <textarea name="wishes" placeholder="Ваши пожелания или вопросы"></textarea>
+    <button type="submit" class="btn">Отправить</button>
+  </form>
+  <p id="formMessage"></p>
+</section>
+
+<!-- ===== Контакты ===== -->
+<section class="section contacts-section">
+  <h2 class="section-title">По вопросам пишите нам</h2>
+  <p class="contacts-text">Телефон / Telegram / WhatsApp</p>
+  <p class="contacts-phone">+375 XX XXX-XX-XX</p>
+</section>
+
+<footer>
+  <p>С любовью, Тимофей и Ксения 💙</p>
+  <p class="footer-small">«Зорко одно лишь сердце»</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #fdf8f0;
+  color: #1e3a5f;
+  line-height: 1.7;
+}
+
+h1, h2, h3 { font-family: 'Comic Neue', cursive; font-weight: 700; }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  position: relative;
+  background: linear-gradient(180deg, #d6e6f7 0%, #a8c8e8 40%, #fdf8f0 100%);
+  overflow: hidden;
+}
+
+.stars-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, #f5c842 50%, transparent 50%),
+    radial-gradient(2px 2px at 85% 15%, #f5c842 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 30% 70%, #fff 50%, transparent 50%),
+    radial-gradient(2px 2px at 70% 60%, #f5c842 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 50% 10%, #fff 50%, transparent 50%),
+    radial-gradient(2px 2px at 15% 85%, #f5c842 50%, transparent 50%),
+    radial-gradient(1.5px 1.5px at 90% 80%, #fff 50%, transparent 50%);
+  pointer-events: none;
+}
+
+.photo-frame {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px dashed #f5c842;
+  padding: 6px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(30,58,95,0.15);
+  position: relative;
+  z-index: 1;
+  transform: rotate(-3deg);
+  transition: transform 0.3s;
+  margin-bottom: 1.5rem;
+}
+.photo-frame:hover { transform: rotate(0deg) scale(1.03); }
+
+.photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #4a6a8a;
+  margin-bottom: 0.3rem;
+  position: relative; z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 9vw, 5rem);
+  color: #1e3a5f;
+  line-height: 1.2;
+  position: relative; z-index: 1;
+}
+.hero h1 .amp { color: #f28b82; }
+
+.hero-date {
+  font-size: 1.3rem;
+  color: #4a6a8a;
+  margin: 0.5rem 0 1.8rem;
+  font-weight: 600;
+  position: relative; z-index: 1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background: #1e3a5f;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #142840;
+  transition: transform 0.15s, box-shadow 0.15s;
+  position: relative; z-index: 1;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #142840;
+}
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #142840;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 4rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #1e3a5f;
+  margin-bottom: 2rem;
+  display: inline-block;
+  position: relative;
+}
+.section-title::after {
+  content: '✦';
+  position: absolute;
+  right: -25px;
+  top: -5px;
+  color: #f5c842;
+  font-size: 1.2rem;
+}
+.section-title::before {
+  content: '✦';
+  position: absolute;
+  left: -25px;
+  top: -5px;
+  color: #f28b82;
+  font-size: 1.2rem;
+}
+
+/* ===== COUNTDOWN ===== */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.cd-item {
+  background: #fff;
+  border: 3px solid #a8c8e8;
+  border-radius: 20px;
+  padding: 1.2rem 1.5rem;
+  min-width: 85px;
+  box-shadow: 0 4px 0 #a8c8e8;
+}
+
+.cd-item span {
+  font-family: 'Comic Neue', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a5f;
+  display: block;
+  line-height: 1.1;
+}
+.cd-item p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #4a6a8a;
+}
+
+/* ===== DETAILS ===== */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.detail-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 4px 0 #d6e6f7;
+  border: 2px solid #d6e6f7;
+  text-align: center;
+}
+.detail-card h3 {
+  color: #f28b82;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+.detail-time {
+  font-family: 'Comic Neue', cursive;
+  font-size: 2rem;
+  color: #1e3a5f;
+  font-weight: 700;
+}
+.detail-place {
+  font-size: 0.9rem;
+  color: #6a8aaa;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* ===== CALENDAR ===== */
+.calendar {
+  display: inline-block;
+  background: #fff;
+  border-radius: 20px;
+  padding: 1.5rem 1.8rem;
+  box-shadow: 0 4px 0 #d6e6f7;
+  border: 2px solid #d6e6f7;
+  max-width: 340px;
+  width: 100%;
+}
+
+.cal-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.cal-month {
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e3a5f;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.cal-day-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #f28b82;
+  padding: 4px 0;
+}
+
+.cal-day {
+  padding: 8px 0;
+  font-size: 0.95rem;
+  border-radius: 50%;
+  color: #1e3a5f;
+}
+
+.cal-day.wedding-day {
+  background: #f5c842;
+  color: #1e3a5f;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #f5c842;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 65px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #a8c8e8, #f5c842, #f28b82);
+  border-radius: 2px;
+}
+
+.tl-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 90px;
+}
+
+.tl-time {
+  position: absolute;
+  left: 0;
+  width: 55px;
+  text-align: right;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1e3a5f;
+}
+
+.tl-item::before {
+  content: '●';
+  position: absolute;
+  left: 57px;
+  color: #f5c842;
+  font-size: 1.2rem;
+  z-index: 1;
+  background: #fdf8f0;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+.tl-text {
+  background: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+  border: 2px solid #d6e6f7;
+  font-weight: 600;
+  color: #1e3a5f;
+  flex: 1;
+}
+
+/* ===== RSVP ===== */
+.rsvp-section { background: #fff; border-radius: 30px; margin: 2rem auto; padding: 3rem 1.5rem; max-width: 600px; border: 3px dashed #a8c8e8; }
+.rsvp-note { color: #6a8aaa; margin-bottom: 1.5rem; font-size: 0.95rem; }
+
+#rsvpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea {
+  padding: 0.9rem 1rem;
+  border: 2px solid #d6e6f7;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  background: #fdf8f0;
+  color: #1e3a5f;
+  transition: border-color 0.2s;
+}
+#rsvpForm input:focus,
+#rsvpForm select:focus,
+#rsvpForm textarea:focus {
+  outline: none;
+  border-color: #f5c842;
+}
+
+#rsvpForm textarea { min-height: 90px; resize: vertical; }
+
+#formMessage {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* ===== CONTACTS ===== */
+.contacts-text { color: #6a8aaa; margin-bottom: 0.3rem; }
+.contacts-phone {
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e3a5f;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: #1e3a5f;
+  color: #d6e6f7;
+  font-size: 0.95rem;
+}
+.footer-small {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 500px) {
+  .cd-item { padding: 0.8rem 1rem; min-width: 65px; }
+  .cd-item span { font-size: 1.8rem; }
+  .timeline::before { left: 50px; }
+  .tl-item { padding-left: 72px; }
+  .tl-time { width: 40px; font-size: 0.95rem; }
+  .tl-item::before { left: 42px; }
+  .section-title::before, .section-title::after { display: none; }
+}// ===== Обратный отсчёт =====
+const weddingDate = new Date('2027-02-27T14:15:00').getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const diff = weddingDate - now;
+
+  if (diff < 0) {
+    document.getElementById('countdown').innerHTML =
+      '<p style="font-family:Comic Neue;font-size:1.5rem;">Этот день настал! 🎉</p>';
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById('days').textContent = days;
+  document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+  document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// ===== RSVP через Formspree (AJAX, без перезагрузки) =====
+const form = document.getElementById('rsvpForm');
+const msg = document.getElementById('formMessage');
+
+form.addEventListener('submit', async function (e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+  const btn = form.querySelector('button');
+  btn.textContent = 'Отправка...';
+  btn.disabled = true;
+  msg.textContent = '';
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      msg.textContent = 'Спасибо! Ваш ответ отправлен. 💙';
+      msg.style.color = '#2e7d32';
+      form.reset();
+    } else {
+      throw new Error('Ошибка отправки');
+    }
+  } catch (err) {
+    msg.textContent = 'Что-то пошло не так. Попробуйте ещё раз или напишите нам напрямую.';
+    msg.style.color = '#c62828';
+  } finally {
+    btn.textContent = 'Отправить';
+    btn.disabled = false;
+  }
+});
