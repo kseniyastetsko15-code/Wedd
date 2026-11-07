@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тимофей & Ксения — 27.02.2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== 照片 + 名字 ===== -->
+<header class="hero">
+  <div class="stars-bg"></div>
+  <div class="photo-frame">
+    <img src="https://placehold.co/600x400/a8c8e8/1e3a5f?text=Ваше+детское+фото" alt="Детское фото">
+  </div>
+  <p class="hero-sub">Мы приглашаем вас на нашу свадьбу</p>
+  <h1>Тимофей <span class="amp">&</span> Ксения</h1>
+  <p class="hero-date">27 февраля 2027</p>
+  <a href="#rsvp" class="btn">Подтвердить присутствие</a>
+</header>
+
+<!-- ===== Обратный отсчёт ===== -->
+<section class="section countdown-section">
+  <h2 class="section-title">До нашей свадьбы осталось</h2>
+  <div class="countdown" id="countdown">
+    <div class="cd-item"><span id="days">0</span><p>дней</p></div>
+    <div class="cd-item"><span id="hours">0</span><p>часов</p></div>
+    <div class="cd-item"><span id="minutes">0</span><p>минут</p></div>
+    <div class="cd-item"><span id="seconds">0</span><p>секунд</p></div>
+  </div>
+</section>
+
+<!-- ===== Данные (место/время) ===== -->
+<section class="section details-section">
+  <h2 class="section-title">Где и когда</h2>
+  <div class="details-grid">
+    <div class="detail-card">
+      <h3>Церемония</h3>
+      <p class="detail-time">14:30</p>
+      <p>27 февраля 2027</p>
+      <p class="detail-place">Место будет объявлено позже</p>
+    </div>
+    <div class="detail-card">
+      <h3>Банкет</h3>
+      <p class="detail-time">16:00</p>
+      <p>27 февраля 2027</p>
+      <p class="detail-place">Место будет объявлено позже</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Календарик ===== -->
+<section class="section calendar-section">
+  <h2 class="section-title">Отметьте день в календаре</h2>
+  <div class="calendar">
+    <div class="cal-header">
+      <span class="cal-month">Февраль 2027</span>
+    </div>
+    <div class="cal-grid">
+      <span class="cal-day-name">Пн</span><span class="cal-day-name">Вт</span>
+      <span class="cal-day-name">Ср</span><span class="cal-day-name">Чт</span>
+      <span class="cal-day-name">Пт</span><span class="cal-day-name">Сб</span>
+      <span class="cal-day-name">Вс</span>
+      <span class="cal-day empty"></span><span class="cal-day">1</span>
+      <span class="cal-day">2</span><span class="cal-day">3</span>
+      <span class="cal-day">4</span><span class="cal-day">5</span>
+      <span class="cal-day">6</span><span class="cal-day">7</span>
+      <span class="cal-day">8</span><span class="cal-day">9</span>
+      <span class="cal-day">10</span><span class="cal-day">11</span>
+      <span class="cal-day">12</span><span class="cal-day">13</span>
+      <span class="cal-day">14</span><span class="cal-day">15</span>
+      <span class="cal-day">16</span><span class="cal-day">17</span>
+      <span class="cal-day">18</span><span class="cal-day">19</span>
+      <span class="cal-day">20</span><span class="cal-day">21</span>
+      <span class="cal-day">22</span><span class="cal-day">23</span>
+      <span class="cal-day">24</span><span class="cal-day">25</span>
+      <span class="cal-day">26</span>
+      <span class="cal-day wedding-day">27</span>
+      <span class="cal-day">28</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Программа дня ===== -->
+<section class="section program-section">
+  <h2 class="section-title">Программа дня</h2>
+  <div class="timeline">
+    <div class="tl-item"><span class="tl-time">14:15</span><span class="tl-text">Сбор гостей</span></div>
+    <div class="tl-item"><span class="tl-time">14:30</span><span class="tl-text">Торжественная церемония</span></div>
+    <div class="tl-item"><span class="tl-time">16:00</span><span class="tl-text">Весёлый банкет</span></div>
+    <div class="tl-item"><span class="tl-time">21:00</span><span class="tl-text">Очень вкусный торт</span></div>
+    <div class="tl-item"><span class="tl-time">23:00</span><span class="tl-text">Конец чудесного вечера</span></div>
+  </div>
+</section>
+
+<!-- ===== RSVP ===== -->
+<section class="section rsvp-section" id="rsvp">
+  <h2 class="section-title">Подтвердите присутствие</h2>
+  <p class="rsvp-note">Пожалуйста, ответьте до 1 февраля 2027</p>
+  <form id="rsvpForm" action="https://formspree.io/f/ВАШ_ID" method="POST">
+    <input type="text" name="name" placeholder="Ваше имя и фамилия" required>
+    <select name="attendance" required>
+      <option value="">Придёте ли вы?</option>
+      <option value="Да, буду">Да, буду</option>
+      <option value="К сожалению, не смогу">К сожалению, не смогу</option>
+    </select>
+    <input type="text" name="guest" placeholder="Имя сопровождающего (если будет)">
+    <textarea name="wishes" placeholder="Ваши пожелания или вопросы"></textarea>
+    <button type="submit" class="btn">Отправить</button>
+  </form>
+  <p id="formMessage"></p>
+</section>
+
+<!-- ===== Контакты ===== -->
+<section class="section contacts-section">
+  <h2 class="section-title">По вопросам пишите нам</h2>
+  <p class="contacts-text">Телефон / Telegram / WhatsApp</p>
+  <p class="contacts-phone">+375 XX XXX-XX-XX</p>
+</section>
+
+<footer>
+  <p>С любовью, Тимофей и Ксения 💙</p>
+  <p class="footer-small">«Зорко одно лишь сердце»</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
